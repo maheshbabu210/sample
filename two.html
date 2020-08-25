@@ -1,0 +1,272 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- <script>
+		var temp_data = "";
+		var queryStr ="";
+		var productId ="";
+		var productname = "";
+		var pro="";
+		var Product_adc = "";
+		var par_bulk = ""; //added by vignesh 
+		var productNames = {'3122':'Two Wheeler','3121':'Private Car','026403':'Accident shield','020147MediPrime':'MediPrime','5504':'India Fire','2876':'GCS','1403':'AIGC','069630GMC':'GMC','4255':'SFP','2878':'GCS+','288801':'MediCare','3124':'Comercial Vehicle','020147Mediprime Renewal':'MediPrime Renewal','069630GMC Renewal':'GMC Renewal','2889':'Group MediCare','2895':'GroupHospiCash','5501':'HomeSecure','020952':'Travel Insurance','4277':'Accident Guard Plus','5506':'Personal Extended Protection Policy','1507':'Personal All Risk','288804':'Medicare Plus','1506':'Smart Care','3186':'AutoSecureCPA','7777':'Gruh Suraksha','3184':'BRE Private Car','288801MPTOMC':'Mediprime to MediCare','2807':'Arogya Sanjeevani Policy'};
+		var prodCode = {'3122':'tw','3121':'pc','026403':'ipa','020147MediPrime':'mp','5504':'if','2876':'gcs','1403':'aigc','069630GMC':'gmc','4255':'sfp','2878':'gcsplus','288801':'mc','3124':'cv','020147Mediprime Renewal':'mpr','069630GMC Renewal':'gmcr','2889':'gmcre','2895':'ghc','5501':'hs','020952':'trl','4277':'agp','5506':'pepp','1507':'par','288804':'mcps','3186':'ascpa','7777':'gruh','1506':'smc','3184':'brepc','288801MPTOMC':'mptomc','2807':'arogya'};
+		var quote = { '3122' : 'motquote.html', '3121' : 'motquote.html','026403' : 'ipa.html','020147MediPrime' : 'mediprime.html','5504' : 'indiafirequote.html','2876' : 'gcsquote.html','1403' : 'agencybancaquote.html','069630GMC' : 'gmcquote.html','4255' : 'sfp/sfpquote.html','2878':'gcsplus/gcsplusquote.html','288801':'medicare.html','3124':'motquote.html','020147Mediprime Renewal':'mprenewalsearch.html','069630GMC Renewal':'gmcrenewalsearch.html','2889' : 'groupmc/groupmedicarequote.html','2895':'ghc/grouphospicashquote.html','5501':'hs/homesecurequote.html','020952':'travel/travelquote.html','4277':'agp/accidentguardplusquote.html','5506':'pepp/peppquote.html','1507':'par/personalallriskquote.html','288804':'mcplus/mcplusquotation.html','3186':'ascpa/autosecurecpaquote.html','7777':'gruh/gruhsurakshaquote.html','1506' : 'scare/smartcarequote.html','3184':'motor/pcquote.html','288801MPTOMC':'mptomcrenewal.html','2807':'arogyasanjeevani/arogyaquotation.html'};
+		var proposal = { '3122' : 'motproposal.html', '3121' : 'motproposal.html','026403' : 'ipaproposal.html','020147MediPrime' : 'mediprime-proposal.html','5504' : 'indiafireproposal.html','2876' : 'gcsproposal.html','1403' : 'agencybancaproposal.html','069630GMC' : 'gmcproposal.html','4255' : 'sfp/sfpproposal.html','2878':'gcsplus/gcsplusproposal.html','288801':'medicare-proposal.html','3124':'motproposal.html','020147Mediprime Renewal':'mprenewalsearch.html','069630GMC Renewal':'gmcrenewalsearch.html','2889' : 'groupmc/groupmedicareproposal.html','2895':'ghc/grouphospicashproposal.html','5501':'hs/homesecureproposal.html','020952':'travel/travel_proposal.html','4277':'agp/accidentguardplusproposal.html','5506':'pepp/peppproposal.html','1507':'par/personalallriskproposal.html','288804':'mcplus/mcplusproposal.html','3186':'ascpa/autosecurecpaproposal.html','1506' : 'scare/smartcareproposal.html','3184':'motor/pcproposal.html','288801MPTOMC':'mptomcrenewal.html','2807':'arogyasanjeevani/arogyaproposal.html'};
+		var search = { '3122' : 'motsearch.html', '3121' : 'motsearch.html','026403' : 'ipasearch.html','020147MediPrime' : 'medisearch.html','5504' : 'indiafiresearch.html','2876' : 'gcssearch.html','1403' : 'agencybancasearch.html','069630GMC' : 'gmcsearch.html','4255' : 'sfpsearch.html','2878':'gcsplussearch.html','288801':'medicaresearch.html','3124':'motsearch.html','020147Mediprime Renewal':'mprenewalsearch.html','069630GMC Renewal':'gmcrenewalsearch.html','2889' : 'groupmedicaresearch.html','2895':'ghc/grouphospicashsearch.html','5501':'hs/homesecuresearch.html','020952':'travel/travelsearch.html','4277':'agp/accidentguardplussearch.html','1507':'par/personalallrisksearch.html','5506':'pepp/peppsearch.html','288804':'mcplus/mcplussearch.html','3186':'ascpa/autosecurecpasearch.html','1506' : 'scare/smartcaresearch.html','3184' : 'motor/pcsearch.html','288801MPTOMC':'mptomcrenewalsearch.html','2807':'arogyasanjeevani/arogyasearch.html'};
+		var bulkcase={'1507':'par/parbulkfileupload.html','5506':'pepp/peppbulkfileupload.html','1506':'scare/smartcarebulkfileupload.html'};
+		var vehicleinspection={'3122' : 'motvehicleinspection.html','3121' : 'motvehicleinspection.html','3124' : 'motvehicleinspection.html','3184' : 'motor/pcinspection.html'};
+		var medicarerenewal={'288801' : 'medicarerenewal.html'}; //Added for Medicare Renewal
+		var adc_name="";
+		//added by Gisha for CR121 on 6th dec 2018
+		if(src=="AXISEMP")
+		{
+			pdata = "partner="+srcVal+"&Source="+src+"&UsrId="+userId+"&T="+TokenValue;  //Added By Bala 09/01/2019
+		}
+		else if(src == "ADC" && (grpArray.indexOf(group_name) != -1)) // Added By Bala for Adc Concept
+		{
+			pdata="partner="+group_name+"&Source="+src+"&UsrId="+userId+"&T="+TokenValue
+		}		
+		else if(src == "ASL" && (group_name == "ASLDIGI")) //added by  for CR150 on 2nd Apr 2019
+		{		
+			pdata="partner="+group_name+"&Source="+src+"&UsrId="+userId+"&T="+TokenValue
+		}
+		else if(src == "IDBI" && (group_name == "IDBIRAC")) //added by BALA for CR197 on 31-10-2019
+		{
+			pdata="partner="+group_name+"&Source="+src+"&UsrId="+userId+"&T="+TokenValue
+		}
+		else if(src == "CANARA" && (can_grpArray.indexOf(group_name) != -1)) // Added By Bala for Canara group Concept 01-July-2020
+		{
+			pdata="partner="+group_name+"&Source="+src+"&UsrId="+userId+"&T="+TokenValue
+		}
+		else
+		{		
+			pdata = "partner="+src+"&Source="+src+"&UsrId="+userId+"&T="+TokenValue;
+		}			
+		$.ajax({
+			type: "POST",
+			url: ENDPOINTURL + "ws/v1/ws/nodws/moduledtls",
+			dataType: "json",		
+			data: pdata,
+			success: function (successData, status, xhr) 
+			{    
+				if (successData.status == "0") {
+					//Code to enable and disable modules based on 
+					queryStr = QueryString();
+					
+					productId = queryStr.param1;
+					Product_adc = queryStr.param1;
+					par_bulk= queryStr.param3;
+					
+					productname = queryStr.product_name;
+					if (productId == "020147" || productId == "069630")
+					{
+						Product_adc = productId+""+productname;
+					}
+					
+					/*if(ipdsflow == "GRP3" && user_type=="Verifier")
+					{						
+						$("#quoteLink").css("pointer-events","block");
+						$("#quoteLink").css("opacity","0.6");
+						$("#convertQuoteLink").css("pointer-events","block");
+						$("#convertQuoteLink").css("opacity","0.6");
+					}*/
+					
+					module_dtls = successData.data;
+					//Below Code added for Medicare/Protect/premier Partner wise configuration on 22/10/2018
+					var temp_mdl = JSON.stringify(module_dtls);
+					var temp_mdl2 = temp_mdl.replace("mcprotect", "mc");
+					var temp_mdl3 = temp_mdl2.replace("mcpremier", "mc");
+					module_dtls = JSON.parse(temp_mdl3)
+					//Changes ends here
+					temp_data=module_dtls[prodCode[Product_adc]];
+					pro=prodCode[Product_adc];
+					document.getElementById('quoteLink').style.display = 'block';		
+					document.getElementById('convertQuoteLink').style.display = 'block';
+					if( module_dtls[pro].toLowerCase().indexOf("quotation") == -1 || (app_module!="" && app_module.indexOf("mquote") == -1)){
+						document.getElementById('quoteLink').style.display = 'none';		
+					}
+					if( module_dtls[pro].toLowerCase().indexOf("proposal") == -1 || (app_module!="" && app_module.indexOf("mproposal") == -1)){
+						document.getElementById('convertQuoteLink').style.display = 'none';		
+					}
+					if(app_module!="" && app_module.indexOf("prop_srch") == -1 && app_module.indexOf("quote_srch") == -1 && app_module.indexOf("policy_srch") == -1){
+						document.getElementById('searchQuoteLink').style.display = 'none';		
+					}
+					
+					document.getElementById("quoteLink").setAttribute("href", quote[Product_adc]+"?param1=" + productId);
+					document.getElementById("convertQuoteLink").setAttribute("href", proposal[Product_adc]+"?param1="+productId);
+					document.getElementById("searchQuoteLink").setAttribute("href", search[Product_adc]+"?param1="+productId);
+					document.getElementById("vehicleInspection").setAttribute("href", vehicleinspection[Product_adc]+"?param1="+productId);
+					document.getElementById("medicarerenewal").setAttribute("href", medicarerenewal[Product_adc]+"?param1="+productId);//Added by vinotha for Medicare Renewal
+					document.getElementById("homelink").setAttribute("href", "ipds.html")
+					if(sessionStorage.getItem("GrpmcTopUp") == "Yes" && src!="IDBI"){ // added by tejaswi for AD172
+						document.getElementById("prodname").innerHTML=" ETB- Group Medicare Top up";
+					}else{
+						document.getElementById("prodname").innerHTML=productNames[Product_adc];
+					}
+					//ENABLE INSPECTION TAB
+					if(productId == '3122' || productId == '3121' || productId == '3124' || productId == '3184')
+					{	
+						$('#nav-vehicleInspection').attr('style','display:block');
+						$('#nav-medicarerenewal').attr('style','display:none');
+					}
+					else{
+						$('#nav-vehicleInspection').attr('style','display:none');
+						if(productId=='288801')//Added by vinotha for Medicare Renewal
+						{
+							$('#nav-medicarerenewal').attr('style','display:block');
+						}
+						else{
+							$('#nav-medicarerenewal').attr('style','display:none');
+						}
+						if(src=="TCALLC") //added by Gisha for CR_248 on 29th April 2020
+							document.getElementById('quoteLink').style.display = 'none';		
+					}
+					if(src=="CANSSO")//src CANSSO  added by Gisha for CR 247 on 23 June 2020
+					{
+						document.getElementById('searchQuoteLink').style.display = 'none';
+						document.getElementById('homelink').style.display = 'none';
+						if(productId=='288801')
+							$('#nav-medicarerenewal').attr('style','display:none');
+						
+					}	
+							
+					if(src=="ADC" || src=="ASL" || src == "INDUSTS"){
+						adc_name=uid+" ( "+user_type+" ) ";
+					}
+					else{
+						adc_name=uid;
+					}
+					document.getElementById("userid").innerHTML=adc_name;
+					document.getElementById("partner").innerHTML=src;
+					//Added for Travel Insurance Lavanya
+					if(productId == '020952'){
+						$("#convertQuoteLink").css("pointer-events","none");						
+					}
+					//Below If condition added for Mediprime to medicare Renewal on 30/01/2020(ADC-Agents/Verifier flow SSO)
+					if(productId == '288801MPTOMC'){
+					    $("#quoteLink").text("Proposal");
+						document.getElementById('homelink').style.display ='none';
+						document.getElementById('quoteLink').style.display ='block';
+						document.getElementById('convertQuoteLink').style.display ='none';
+					}
+					
+					if (productname != "" && (group_name == "ADC-RENEWALS" || group_name == "ADCRENEWALS"))
+					{
+					    //And condition added for Mediprime to medicare Renewal on 30/01/2020(SSO)
+					    if(sessionStorage.getItem("redirect")!=undefined && sessionStorage.getItem("redirect")!="undefined" && sessionStorage.getItem("redirect") != "No")
+						{ 
+							sessionStorage.setItem('redirect','Yes');
+						}
+						else
+						{
+							$('#nav-homelink').addClass( "selected" );
+							$('#tagiciFrame2').attr('src',"home.html?param1="+productId+"&param2="+productname);
+						}
+							
+						if(productname == "MediPrime-Renewal" && sessionStorage.getItem("redirect") != "No")
+						{
+							sessionStorage.setItem("redirect","No");
+							$('#tagiciFrame2').attr('src',"mprenewalhome.html");
+						}
+						else if(productname == "Group_MediPrime-Renewal" && sessionStorage.getItem("redirect") != "No")
+						{
+							sessionStorage.setItem("redirect","No");
+							$('#tagiciFrame2').attr('src',"gmcrenewalhome.html?policy_number="+Policy_no);
+						}
+					}
+					else if (src.indexOf("ADC") != -1 || src.indexOf("ASL") != -1 || src.indexOf("INDUSTS") != -1)
+					{
+						$('#nav-homelink').addClass( "selected" );
+						$('#tagiciFrame2').attr('src',"home.html?param1="+productId+"&param2="+productname);
+					}else if(par_bulk == 'bulk'){		//par bulk upload
+						document.getElementById('quoteLink').style.display ='none';
+						document.getElementById('convertQuoteLink').style.display ='none';
+						document.getElementById('searchQuoteLink').style.display ='none';
+						document.getElementById('vehicleInspection').style.display ='none';
+						document.getElementById('bulk_upload').style.display ='block';
+						$('#tagiciFrame2').attr('src',bulkcase[Product_adc]+"?param1=" + productId);
+					}else
+					{	//added by Gisha for CR 130 on 7th Jan 2019
+						if (successData.is_activeusr=="N")
+						{	
+							alert("User ID has been blocked for New policy issuance")
+						}	
+						else{
+							if(productId == '7777'){
+								document.getElementById('quoteLink').style.display ='block';
+								document.getElementById('convertQuoteLink').style.display ='none';
+								document.getElementById('searchQuoteLink').style.display ='none';
+								document.getElementById('vehicleInspection').style.display ='none';
+							}
+							if(src=="TCALLC") //added by Gisha for CR248 on 29th April 2020
+								$('#tagiciFrame2').attr('src',proposal[Product_adc]+"?param1=" + productId);
+							else
+							$('#tagiciFrame2').attr('src',quote[Product_adc]+"?param1=" + productId);
+						}
+					}
+					document.getElementById("group").innerHTML=group_name;
+					
+				}
+				else if(successData.status == "1") { 
+					console.log(successData.err)
+				}
+			},
+			error: function (errorData, status, xhr) {
+				console.log("error")
+			}
+		});
+		
+		
+		function QueryString() {
+			var query_string = {};
+			var query = window.location.search.substring(1);
+			
+			var vars = query.split("&");
+			for (var i = 0; i < vars.length; i++) {
+				var pair = vars[i].split("=");
+				if (typeof query_string[pair[0]] === "undefined") {
+					query_string[pair[0]] = decodeURIComponent(pair[1]);
+				} else if (typeof query_string[pair[0]] === "string") {
+					var arr = [query_string[pair[0]], decodeURIComponent(pair[1])];
+					query_string[pair[0]] = arr;
+				} else {
+					query_string[pair[0]].push(decodeURIComponent(pair[1]));
+				}
+			}
+			return query_string;
+		}
+		
+		$( document ).ready(function() {
+		
+			if(src=="INFY" || src=="ANIVITI" || src=="HCL" || src=="AXISEMPRL" || src=="CHNLPORT1"){
+				$("#searchQuoteLink").hide();
+			}
+		
+			$("#cssmenu li").click(function(){
+				var str = $(this).index();
+			$("#cssmenu li").removeClass("selected");
+				$(this).addClass( "selected" );
+			});
+		});	
+		
+	</script> -->
+</head>
+<body>
+    <label class="form-lbl">Product<span style="color:red">*</span>
+    </label>
+    <select class="form-control select-product" data-bind="select-product">
+        <option value="Select">Select Product</option>
+        <option value="MediCare">MediCare</option>
+        <option value="MediCare Protect">MediCare Protect</option>
+        <option value="MediCare Premier">MediCare Premier</option>
+        <option  value="santoorsoap">santhoor premier</option>
+    </select>
+</body>
+</html>
