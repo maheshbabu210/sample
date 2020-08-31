@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#validate').click(function(){
+                var inputval = $('#phonebox').val();
+                if(inputval.length==10){
+                     if(isNaN(inputval())){
+                         $('#result').html('not a number');
+                        }
+                      else{
+                    $('#result').html('valid phone number');
+                    }
+                }
+                 else{
+                     $('#result').html('not a valid phone number please enter 10 digit number');
+                 }
+                
+            });
+        });
+
+    </script>
+</head>
+<body>
+       enter the phonenumber:
+       <input type="text" id="phonebox"> <br>
+       <button id="validate">click to validate</button> 
+       <div id="result"></div>
+</body>
+
+</html>

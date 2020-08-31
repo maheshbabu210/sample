@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+     crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
+     <script>
+          $(document).ready(function(){
+              $('#form-1').validate({
+                  rules:{
+                      myname:{
+                          required:true,
+                          minlength:5
+                      },
+                      email:{
+                          required:true,
+                          email:true
+                      },
+                      phonenumber:{
+                          required:true,
+                          minlength:10,
+                          charset:Number
+                      },
+                      
+
+                  },
+                  
+                  messages:{
+                       myname:{
+                      required:'name is mandatory',
+                      minlength:'5characters must'
+                  },
+                  email:{
+                     required:'email is mandatory',
+                     email:'enter valid email addres'
+                  },
+                  phonenumber:{
+                     required:'phonenumber is mandatory',
+                     phonenumber:'enter valid phonenumber',
+                     minlength:'10numbers must required',
+                     charset:'only numbers should be given'
+                  },
+                  }
+              })
+          })
+     </script>
+</head>
+<body>
+    <form action="" id="form-1">
+        <input type="text" name="myname" id="myname" placeholder="enter your name" class="form-control">
+        <br>
+        <input type="text" name="email" id="email" placeholder="enter your email" class="form-control">
+        <br>
+        <input type="text" name="phonenumber" id="phonenumber" placeholder="enter your phonenumber" class="form-control">
+        <br>
+        <input type="submit" value="submit" class="btn btn-info btn-block">
+    </form>
+</body>
+</html>
